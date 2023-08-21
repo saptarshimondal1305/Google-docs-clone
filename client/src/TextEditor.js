@@ -25,7 +25,7 @@ const TextEditor = () => {
     // console.log(documentId)
 
     useEffect(() => {
-        const s = io("https://docs-clone-29er.onrender.com");
+        const s = io("https://google-docs-o82z.onrender.com");
         setSocket(s);
         return () => {
             s.disconnect()

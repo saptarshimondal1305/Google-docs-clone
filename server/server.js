@@ -8,7 +8,7 @@ mongoose
   .then(() => console.log("connected to data base"))
   .catch((err) => console.log(err));
 
-const io = require("socket.io")(3001, {
+const io = require("socket.io")(3005, {
   cors: {
     origin: ["https://google-docs-clone-phi-hazel.vercel.app/","https://google-docs-clone-6s9rbuvho-saptarshimondal1305.vercel.app"]
     methods: ["GET", "POST"],

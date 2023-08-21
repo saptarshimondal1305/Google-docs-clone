@@ -21,7 +21,7 @@ export const TextEditor = () => {
     const [socket, setSocket] = useState()
     const [quill, setQuill] = useState()
     useEffect(()=> {
-        const s = io("http://localhost:3001")
+        const s = io("https://google-docs-o82z.onrender.com")
         setSocket(s)
 
         return () => {

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const Document = require('./Document')
 
-const remoteMongoDBURL = "mongodb+srv://sappy:sachin123@cluster0.svgmlj0.mongodb.net/google-docs-clone"
+const remoteMongoDBURL = process.env.MONGODB_URL
 mongoose.set("strictQuery", false);
 mongoose
   .connect(remoteMongoDBURL)
@@ -10,7 +10,7 @@ mongoose
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://google-docs-clone-phi-hazel.vercel.app/",
     methods: ["GET", "POST"],
     allowedHeaders: ["*"], // You can adjust allowed headers as needed
     credentials: true, // You might need this if you're dealing with cookies or authentication

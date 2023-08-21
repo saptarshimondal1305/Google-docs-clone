@@ -8,9 +8,10 @@ mongoose
   .then(() => console.log("connected to data base"))
   .catch((err) => console.log(err));
 
-const io = require("socket.io")(3005, {
+const io = require("socket.io")(3001, {
   cors: {
-    origin: ["https://google-docs-clone-phi-hazel.vercel.app/","https://google-docs-clone-6s9rbuvho-saptarshimondal1305.vercel.app"]
+    origin: ["https://google-docs-clone-git-main-saptarshimondal1305.vercel.app",
+             ""],
     methods: ["GET", "POST"],
     allowedHeaders: ["*"], // You can adjust allowed headers as needed
     credentials: true, // You might need this if you're dealing with cookies or authentication
